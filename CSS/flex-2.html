@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            direction: ltr;
+
+            width: 1500px;
+            height: 800px;
+            margin: auto;
+            background-color: silver;
+
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            /* row, column, row-reverse, column-reverse */
+
+            justify-content: start;
+            /* 
+                start(flex-start),center,end(flex-end)
+                space-between, space-around, space-evenly
+            */
+
+            align-items: center;
+            /* 
+                start(flex-start),center,end(flex-end)
+                stretch,baselin
+            */
+
+            /* 
+                flex-direction為row時
+                justify-content 是水平對齊
+                align-items 是垂直對齊
+                flex-basis 是寬度
+
+                flex-direction為column時
+                justify-content 是垂直對齊
+                align-items 是水平對齊
+                flex-basis 是高度
+            */
+        }
+        .box {
+            /* width: 400px; */
+            /* flex-basis: 200px; */
+            /* padding: 15px; */
+            width: 100%;
+            flex: 0 0 calc(100% / 3);
+            /* [grow][shrink][basis] */
+
+        }
+        .box:nth-of-type(1){
+            background-color: #fa0;
+            /* order:2; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 0; */
+        }
+        .box:nth-of-type(2){
+            background-color: #09a1ff;
+            /* order: 1; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 0; */
+        }
+        .box:nth-of-type(3){
+            background-color: #ff0044;
+            /* order: 3; */
+            /* flex-grow: 1; */
+        }
+        
+        /* 
+            order排序
+            自然排序->自訂排序(數字越小越前面)
+        */
+        /* 
+            壓縮與換行衝突
+        
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+            </p>
+        </div>
+        <!-- <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque at natus in, commodi modi, asperiores obcaecati eveniet voluptates totam error excepturi vel possimus saepe eos pariatur quis velit deserunt? Fugit.`
+            </p>
+        </div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <label for="name">名稱</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="pw">密碼</label>
+        <input type="password" name="pw" id="pw">
+        <br>
+        <label for="birth">生日</label>
+        <input type="date" name="birth" id="birth">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="qty">數量</label>
+        <input type="number" name="qty" id="qty">
+        <br>
+        <label for="edy">學歷</label>
+        <select name="edu" id="edu">
+            <option value="國小">國小</option>
+            <option value="國中">國中</option>
+            <option value="高中職">高中職</option>
+            <option value="大專院校">大專院校</option>
+            <option value="研究所以上">研究所以上</option>
+        </select>
+        <br>
+        <label for="">學歷</label>
+        <input type="text" list="eduList">
+        <datalist id="eduList">
+            <option value="國小">國小</option>
+            <option value="國中">國中</option>
+            <option value="高中職">高中職</option>
+            <option value="大專院校">大專院校</option>
+            <option value="研究所以上">研究所以上</option>
+        </datalist>
+        <br>
+        <label>性別</label>
+        <input type="radio" name="gender" id="men" value="男">
+        <label for="men">男</label>
+        <input type="radio" name="gender" id="wemen" value="女">
+        <label for="wemen">女</label>
+        <br>
+        <label>從何得知</label>
+        <input type="checkbox" name="howToKnows" id="sns" value="社群軟體">
+        <label for="sns">社群軟體</label>
+        <input type="checkbox" name="howToKnows" id="news" value="新聞報導">
+        <label for="news">新聞報導</label>
+        <input type="checkbox" name="howToKnows" id="podcast" value="Podcast">
+        <label for="podcast">Podcast</label>
+
+        <br>
+        <label for="content">內容</label>
+        <textarea name="content" id="content" cols="60" rows="8"></textarea>
+        <br>
+        <input type="submit" value="送出">
+        <input type="reset" value="清除">    
+        <input type="button" value="自訂義">
+        <br>
+        <button type="submit">送出</button>
+        <button type="reset">清除</button>
+        <button type="button">自訂</button>
+    </form>
+</body>
+</html>

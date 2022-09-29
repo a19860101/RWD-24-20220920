@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+            background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%, rgba(172,253,163,0.64) 112.1% ); 
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: silver;
+            position: relative;
+        }
+        [class^="box"]{
+            width: 150px;
+            height: 150px;
+        }
+        /* 
+            ^= 開頭為
+            *= 包含
+            $= 結尾為
+        */
+        .box-1 {
+            background-color: #098;
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .box-2 {
+            background-color: #fa0;
+            position: absolute;
+
+           right: 0;
+           bottom: 0;
+        }
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: navy;
+
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            padding: 15px;
+            z-index: 999;
+            background-color: #222;
+            left: 0;
+        }
+        nav a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        定位 position
+        0. static 靜態
+        1. absolute 絕對
+        2. relative 相對
+        3. fixed 固定
+        4. sticky 黏性
+
+     -->
+    <nav>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+    </nav>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta sunt commodi minus, aut autem eaque. Voluptas quaerat quos inventore eos est magnam? Voluptas fuga dolor deleniti veniam dolore laboriosam!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta sunt commodi minus, aut autem eaque. Voluptas quaerat quos inventore eos est magnam? Voluptas fuga dolor deleniti veniam dolore laboriosam!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta sunt commodi minus, aut autem eaque. Voluptas quaerat quos inventore eos est magnam? Voluptas fuga dolor deleniti veniam dolore laboriosam!
+        </p>
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="fixed"></div>
+    </div>
+</body>
+</html>

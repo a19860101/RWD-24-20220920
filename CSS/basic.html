@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* @import url('style.css'); */
+       
+        /* 
+            選取器
+            1. 標籤 TAG
+            2. 類別 CLASS
+            3. ID
+        */
+        /* 標籤選取器 */
+        p {
+            color: pink;
+        }
+        
+        /* 類別選取器 (可重複使用)*/
+        .abc {
+            color: orange;
+        }
+
+        /* ID選取器 (只可使用一次)*/
+        #xyz {
+            color:cornflowerblue;
+        }
+
+        /* 權重 specificity */
+        /* 
+            影響元素越少，權重越重，越優先套用
+            嵌入式 > id > class > tag
+        */
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="color: red;">title</h1>
+        <p class="abc" id="xyz" style="color:indigo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam mollitia eum!
+        </p>
+        <h2 class="abc">title 2</h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sit delectus necessitatibus, at natus facilis sequi sapiente reiciendis, omnis autem eaque cumque aspernatur beatae, officia quis? Eveniet ex consequuntur id.
+        </p>
+        <ul>
+            <li class="abc">list</li>
+            <li>list</li>
+            <li style="color:greenyellow">list</li>
+            <li>list</li>
+        </ul>
+    </div>
+</body>
+</html>

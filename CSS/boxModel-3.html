@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 萬用選取器 */
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            width: 200px;
+            padding:10px;
+            margin-inline:auto;
+            border: 5px solid #000;
+
+            /* box-sizing: content-box; */
+            box-sizing: border-box;
+            display: block;
+        }
+        a {
+            display: inline-block;
+            padding:8px 30px;
+            background-color: #098;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        /* 
+            display
+            block, inline, inline-block, list-item
+        */
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae repellendus saepe vitae expedita consequuntur reprehenderit, nulla aspernatur ratione rerum alias dicta earum, natus quam repudiandae voluptatem mollitia quisquam, labore sapiente.
+    </div>
+    <span class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores qui veritatis dolore non eaque sed voluptas commodi possimus animi laudantium. Ut corporis tempore, eaque exercitationem ex quam laboriosam deleniti labore.
+    </span>
+    <!-- 
+        區塊block vs 行內inline
+        1. 行內沒有width,height
+        2. margin,padding,border左右正常
+
+     -->
+     <a href="#">link</a>
+</body>
+</html>

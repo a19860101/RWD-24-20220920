@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            background-color: #ccc;
+
+            /* 外距 */
+            /* margin: 30px; */
+            /* margin-left:auto; */
+            /* margin-right:auto; */
+            /* margin-top:100px; */
+            /* margin-bottom:30px; */
+
+            /* margin-inline: auto; */
+            /* margin-inline-start: auto; */
+            /* margin-inline-end: auto; */
+            /* margin-block: 30px; */
+            /* margin-block-start:30px; */
+            /* margin-block-end:30px; */
+
+
+
+            /* 內距 */
+            /* padding: 30px; */
+            /* padding-top: 30px; */
+            /* padding-bottom: 50px; */
+            /* padding-left: 100px; */
+            /* padding-right: 20px; */
+            padding-inline: 50px;
+            /* padding-inline-start: 50px; */
+            /* padding-inline-end: 50px; */
+            padding-block: 30px;
+            /* padding-block-start:30px; */
+            /* padding-block-end:30px; */
+
+
+            /* 內距外距縮寫 */
+            margin: 30px auto;
+            /* 上下 左右 */
+            margin: 30px auto 10px;
+            /* 上 左右 下 */
+            margin: 30px auto 10px auto;
+            /* 上 右 下 左 */
+
+
+            border:13px solid red;
+            /* 
+                solid, double, dotted, dashed
+                inset, outset, groove, ridge
+            */
+            /* border-left: 3px solid red; */
+            /* border-right: 3px solid red; */
+            /* border-top: 3px solid red; */
+            /* border-bottom: 3px solid red; */
+            /* border-left-width: 3px;
+            border-left-style: solid;
+            border-left-color: red;
+            border-right-width: 3px;
+            border-right-style: solid;
+            border-right-color: red;
+            border-top-width: 3px;
+            border-top-style: solid;
+            border-top-color: red;
+            border-bottom-width: 3px;
+            border-bottom-style: solid;
+            border-bottom-color: red; */
+
+            border-radius: 15px;
+            /* border-radius:50px 0 50px 0 ; */
+            /* 
+                左上 右上 右下 左下(順時針)
+            */
+
+            display: list-item;
+            counter-increment: n;
+            list-style-position: inside;
+        }
+        .box::marker {
+            content: counter(n)' ';
+            color: red;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #098;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat maiores pariatur dolores aliquam, molestiae nisi quis nobis id placeat, et vero perferendis sunt est, explicabo numquam ipsam animi! Iste!
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat maiores pariatur dolores aliquam, molestiae nisi quis nobis id placeat, et vero perferendis sunt est, explicabo numquam ipsam animi! Iste!
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat maiores pariatur dolores aliquam, molestiae nisi quis nobis id placeat, et vero perferendis sunt est, explicabo numquam ipsam animi! Iste!
+    </div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repellat maiores pariatur dolores aliquam, molestiae nisi quis nobis id placeat, et vero perferendis sunt est, explicabo numquam ipsam animi! Iste!
+    </div>
+</body>
+</html>
