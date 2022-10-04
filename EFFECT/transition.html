@@ -12,22 +12,25 @@
             background-color: #0af;
             
 
-            /* transition-property: width,transform; */
-            /* transition-duration: 600ms; */
-            /* transition-delay: 0s,600ms */
-            /* transition-timing-function: ; */
+            transition-property: all;
+            transition-duration: 1000ms;
+            transition-delay: 0s;
+            /* transition-timing-function: linear; */
+            /* 
+                ease, ease-in, ease-out, ease-in-out, linear
+            */
 
-            transition:
+            /* transition:
                 transform 600ms 0s,
-                width 600ms 600ms;
+                width 600ms 600ms; */
         }
         .box:hover {
-            transform: rotate(180deg);
-            width: 200px;
+            /* transform: rotate(180deg); */
+            width: 400px;
 
-            transition:
+            /* transition:
                 width 600ms 0s,
-                transform 600ms 600ms;
+                transform 600ms 600ms; */
         }
     </style>
 </head>
