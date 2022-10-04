@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #0af;
+            transition:
+                width 600ms 0s,
+                transform 600ms 600ms;
+
+            /* transition-property: width,transform; */
+            /* transition-duration: 600ms; */
+            /* transition-delay: 0s,600ms */
+            /* transition-timing-function: ; */
+        }
+        .box:hover {
+            transform: rotate(180deg);
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
