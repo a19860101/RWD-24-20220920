@@ -10,18 +10,24 @@
             width: 100px;
             height: 100px;
             background-color: #0af;
-            transition:
-                width 600ms 0s,
-                transform 600ms 600ms;
+            
 
             /* transition-property: width,transform; */
             /* transition-duration: 600ms; */
             /* transition-delay: 0s,600ms */
             /* transition-timing-function: ; */
+
+            transition:
+                transform 600ms 0s,
+                width 600ms 600ms;
         }
         .box:hover {
             transform: rotate(180deg);
             width: 200px;
+
+            transition:
+                width 600ms 0s,
+                transform 600ms 600ms;
         }
     </style>
 </head>
