@@ -6,8 +6,8 @@
     display: flex;
     flex-wrap: wrap;
 }
-.col-1 {
-    flex: 0 0 calc(100% / 12 * 1);
+.col {
+    flex:1 0 0;
 }
 .col-1 {
     flex: 0 0 calc(100% / 12 * 1);
@@ -47,4 +47,8 @@
 }
 [class^="col"]{
     padding:15px;
+}
+
+.w-100 {
+    width: 100%;
 }
