@@ -11,11 +11,20 @@
             height: 100px;
             background-color: #fa0;
 
-            animation:move 4s;
+            animation:go 1s infinite alternate ease;
             /* [name][duration][delay] */
+            /* animation-name: go; */
+            /* animation-duration: 1s; */
+            /* animation-delay: 0s; */
+            /* animation-iteration-count: 1; */
+            /* animation-direction: normal ; */
+            /* normal, reverse ,alternate,alternate-reverse */
+            /* animation-fill-mode: forwards; */
+            /* animation-timing-function: ease-in-out; */
+            /* ease, ease-in, ease-in-out, ease-out, linear */
         }
         @keyframes move {
-            0% {}
+            0% {transform: trnaslate(0,0) rotate(0deg);}
             25% {transform: translate(400px,0) rotate(90deg);}
             50% {transform: translate(400px,400px) rotate(180deg);}
             75% {transform: translate(0,400px) rotate(270deg);}
