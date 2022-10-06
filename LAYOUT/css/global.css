@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Nunito Sans','微軟正黑體',Sans-serif;
+}
+img {
+    width: 100%;
+    display: block;
+}
