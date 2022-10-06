@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Gill Sans Mt';
+        }
+        .container {
+            width: 800px;
+            margin: auto;
+            background-color: #aaa;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+            line-height: 100px;
+            margin-block: 15px;
+            transition: 3s;
+        }
+        .container:hover .box {
+            width: 100%;
+        }
+        .ease {transition-timing-function: ease;}
+        .ease-in {transition-timing-function: ease-in;}
+        .ease-out {transition-timing-function: ease-out;}
+        .ease-in-out {transition-timing-function: ease-in-out;}
+        .linear {transition-timing-function: linear;}
+        .custom {transition-timing-function: cubic-bezier(1,-1.25,.74,.46);}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box ease">Ease</div>
+        <div class="box ease-in">Ease-in</div>
+        <div class="box ease-out">Ease-out</div>
+        <div class="box ease-in-out">ease-in-out</div>
+        <div class="box linear">Linear</div>
+        <div class="box custom">Custom</div>
+    </div>
+</body>
+</html>
