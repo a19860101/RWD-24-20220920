@@ -1,0 +1,23 @@
+/* NAV 主選單 */
+nav {
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+
+    /* height: 70px; */
+    /* align-items: center; */
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+.nav-logo,.nav-link {
+    display: inline-block;
+    padding-inline:12px;
+    padding-block: 20px;
+    text-decoration: none;
+    color: #eee;
+    font-weight: 400;
+}
+/* NAV 主選單 END*/
