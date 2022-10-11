@@ -47,3 +47,8 @@ header p {
     font-weight: 300;
 }
 /* HEADER END */
+/* ABOUT */
+#about {
+    padding-block: 150px;
+}
+/* ABOUT END */
