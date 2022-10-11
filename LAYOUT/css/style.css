@@ -50,5 +50,17 @@ header p {
 /* ABOUT */
 #about {
     padding-block: 150px;
+    text-align: center;
+    background-color: #fffdeb;
+}
+.about-icon {
+    margin-bottom: 30px;
+}
+.about-title {
+    margin-bottom: 10px;
+}
+.about-content {
+    margin-bottom: 10px;
+    padding-inline: 40px
 }
 /* ABOUT END */
