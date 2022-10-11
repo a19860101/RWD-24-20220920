@@ -153,3 +153,26 @@ header p {
 .t-right {text-align: right;}
 .t-justify {text-align: justify;}
 /* TEXT ALIGN END */
+/* CONTACT */
+#contact {
+    padding-block: 150px;
+    background-color: #fffdeb;
+}
+/* CONTACT END */
+/* FORM */
+.form-group {
+    margin-bottom: 15px;
+    
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4e4e4e;
+    outline: 0;
+    transition: 400ms;
+}
+.form-control:focus {
+    border: 1px solid #fa0;
+}
+/* FORM END */
