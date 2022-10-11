@@ -1,12 +1,16 @@
 /* NAV 主選單 */
 nav {
     width: 100%;
-    background-color: #222;
+    background-color: rgb(0 0 0 / .6);
+    backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-between;
 
     /* height: 70px; */
     /* align-items: center; */
+
+    position: fixed;
+    z-index: 9999;
 }
 .nav-menu {
     list-style: none;
