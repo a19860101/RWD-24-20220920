@@ -45,6 +45,7 @@ header h1 {
 header p {
     font-size: 1.2rem;
     font-weight: 300;
+    margin-bottom: 20px;
 }
 /* HEADER END */
 /* SECTION */
@@ -119,5 +120,25 @@ header p {
 /* BTN */
 .btn {
     display: inline-block;
+    text-decoration: none;
+    padding-inline: 20px;
+    padding-block: 8px;
+    border-radius: 5px;
+}
+.btn-dark {
+    background-color: #222;
+    color: #fff;
+}
+.btn-light {
+    background-color: #eee;
+    color: #222;
+}
+.btn-orange {
+    background-color: #ffe732;
+    color: #111;
+}
+.btn-blue {
+    background-color: #34b8ff;
+    color: #000;
 }
 /* BTN END*/
