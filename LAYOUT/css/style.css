@@ -55,6 +55,19 @@ header p {
 }
 .about-icon {
     margin-bottom: 30px;
+    width: 120px;
+    height: 120px;
+    background-color: #ffe2a9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    border:5px solid #f3bb4b;
+    box-shadow: 1px 1px 5px 0 rgb(0 0 0 / .4);
+}
+.about-icon i{
+    color: #291b00;
 }
 .about-title {
     margin-bottom: 10px;
