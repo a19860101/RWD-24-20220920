@@ -187,3 +187,20 @@ footer {
     padding-block: 20px;
 }
 /* FOOTER END*/
+/* GOTOP */
+.gotop {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(0 0 0 / .8);
+    color: #fff;
+    display: block;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+/* GOTOP END*/
