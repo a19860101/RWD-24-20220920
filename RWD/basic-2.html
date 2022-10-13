@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            手機板 置中
+            桌機板 靠左
+        */
+        /* h1 {
+            text-align: center;
+        }
+        @media(min-width: 768px){
+            h1 {
+                text-align: left;
+            }
+        } */
+
+        .t-left {text-align: left;}
+        .t-center {text-align: center;}
+        .t-right {text-align: right;}
+
+        @media(min-width:768px){
+            .t-md-left {text-align: left;}
+            .t-md-center {text-align: center;}
+            .t-md-right {text-align: right;}
+        }
+    </style>
+</head>
+<body>
+    <h1 class="t-center t-md-left">text</h1>
+    <h2 class="t-left t-md-center">text</h2>
+</body>
+</html>
