@@ -36,7 +36,7 @@ nav {
     color: #eee;
     font-weight: 400;
 }
-@media(min-width: 615px){
+@media(min-width: 620px){
     .nav-toggle {
         display: none;
     }
