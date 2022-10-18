@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const drinks = [
+            {
+                id:1,
+                name: '熟成紅茶',
+                price: 25,
+            },
+            {
+                id:2,
+                name: '春芽綠茶',
+                price:25,
+            },
+            {
+                id:3,
+                name: '春芽冷露',
+                price: 30
+            }
+        ];
+        // forEach
+        drinks.forEach(function(data){
+            console.log(data);
+        })
+
+        // map
+        const price = drinks.map(function(data){
+            return data.price;
+        });
+        console.log(price)
+        const drinkNames = drinks.map(function(data){
+            return data.name;
+        });
+        console.log(drinkNames)
+
+    </script>
+</body>
+</html>
