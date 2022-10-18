@@ -22,6 +22,31 @@
         console.log(user.name);
         console.log(user.mail);
         console.log(user.phone);
+        const drinks = [
+            {
+                id:1,
+                name: '熟成紅茶',
+                price: 25,
+            },
+            {
+                id:2,
+                name: '春芽綠茶',
+                price:25,
+            },
+            {
+                id:3,
+                name: '春芽冷露',
+                price: 30
+            }
+        ];
+        console.log(drinks);
+        console.log(drinks[1].name);
+        console.log(drinks[2].price);
+        for(let drink of drinks){
+            console.log(drink.id)
+            console.log(drink.name)
+            console.log(drink.price)
+        }
     </script>
 </body>
 </html>
