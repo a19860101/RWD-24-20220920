@@ -30,7 +30,7 @@
             console.log(data);
         })
 
-        // map
+        // map 對應資料
         const price = drinks.map(function(data){
             return data.price;
         });
@@ -39,6 +39,29 @@
             return data.name;
         });
         console.log(drinkNames)
+
+        // filter 篩選符合條件的資料
+        // const expensive = drinks.filter(function(data){
+        //     return data.price < 30;
+        // })
+        const newDrinks = drinks.filter(function(data){
+            return data.name != '春芽冷露';
+        })
+        
+        
+        //some 檢查陣列內是否有符合規則的資料，有就回傳true
+        const drinks_some = drinks.some(function(data){
+            // return data.name === '春芽冷露';
+            return data.price === 30;
+        })
+        console.log(drinks_some);
+
+        //every 檢查陣列內是否所有資料都符合規則，有就回傳true
+        const drinks_every = drinks.every(function(data){
+            // return data.name === '春芽冷露';
+            return data.price >= 25;
+        })
+        console.log(drinks_every);
 
     </script>
 </body>
