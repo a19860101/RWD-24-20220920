@@ -8,22 +8,51 @@
 </head>
 <body>
     <script>
-        // function declaration 宣告式
+
+        
+        // function declaration 宣告式 提升性
         function twd_us(dollar,exc){
             return dollar / exc;
         }
         console.log(twd_us(10000,32));
-
+        
         function us_twd(dollar,exc){
             return dollar * exc;
         }
         console.log(us_twd(2999,32));
-
+        
         // function expression 表達式
         let money = function(dollar){
             return dollar * 1.1;
         }
         console.log(money(1600));
+
+
+        // arrow function 箭頭函式
+        
+        // let test = function(){
+        //     return 'test';
+        // }
+
+        // let test = ()=>{
+        //     return 'test';
+        // }
+
+        // 如果只有一個參數，則小括號可以省略
+        // let test = x => {
+        //     return x;
+        // }
+
+        // 如果動作內只有return，則return與大括號皆可省略
+        // let test = x => x;
+
+        let test = (x,y) => x+y;
+
+        
+        console.log(test(2,3));
+        /*  
+            箭頭函式與一般函式在大多數的狀況都是相同的，只有在this的指向會不同。
+        */
     </script>
 </body>
 </html>
