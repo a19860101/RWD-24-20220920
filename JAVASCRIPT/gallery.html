@@ -15,9 +15,16 @@
         }
         .thumb {
             display: flex;
+            background-color: #000;
         }
         .thumbs {
             width: 20%;
+            opacity: 0.3;
+            transition: opacity 500ms;
+        }
+        .active {
+            border-bottom: 5px solid #ff003c;
+            opacity: 1;
         }
     </style>
 </head>
@@ -27,7 +34,7 @@
             <img src="https://picsum.photos/id/24/600" alt="" class="main_pic">
         </div>
         <div class="thumb">
-            <img src="https://picsum.photos/id/24/600" alt="" class="thumbs">
+            <img src="https://picsum.photos/id/24/600" alt="" class="thumbs active">
             <img src="https://picsum.photos/id/34/600" alt="" class="thumbs">
             <img src="https://picsum.photos/id/44/600" alt="" class="thumbs">
             <img src="https://picsum.photos/id/54/600" alt="" class="thumbs">
@@ -46,6 +53,8 @@
             //     document.querySelector('.main_pic').setAttribute('src',SRC);
             // }
             t.onclick = e => {
+                document.querySelector('.thumbs.active').classList.remove('active');
+                e.target.classList.add('active');
                 let SRC = e.target.getAttribute('src');
                 document.querySelector('.main_pic').setAttribute('src',SRC);
             }
