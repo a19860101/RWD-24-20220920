@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            transition: 500ms;
+        }
+        .active {
+            color: #fa0;
+            background-color: #42004c;
+            padding: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis necessitatibus natus dolore provident culpa laboriosam enim similique eaque consequatur maiores, tenetur inventore omnis atque, error corporis minima porro voluptas aliquam?
+    </p>
+    <script>
+        let p = document.querySelector('p');
+
+        let add = document.querySelector('.add');
+        let remove = document.querySelector('.remove');
+
+        add.onclick = () => {
+            p.classList.add('active');
+        }
+        remove.onclick = () => {
+            p.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
