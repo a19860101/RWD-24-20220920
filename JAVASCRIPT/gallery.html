@@ -37,8 +37,16 @@
     <script>
         let thumbs = document.querySelectorAll('.thumbs');
         for(let t of thumbs){
-            t.onclick = function(){
-                let SRC = this.getAttribute('src');
+            // t.onclick = function(){
+            //     let SRC = this.getAttribute('src');
+            //     document.querySelector('.main_pic').setAttribute('src',SRC);
+            // }
+            // t.onclick = function(e){
+            //     let SRC = e.target.getAttribute('src');
+            //     document.querySelector('.main_pic').setAttribute('src',SRC);
+            // }
+            t.onclick = e => {
+                let SRC = e.target.getAttribute('src');
                 document.querySelector('.main_pic').setAttribute('src',SRC);
             }
         }
