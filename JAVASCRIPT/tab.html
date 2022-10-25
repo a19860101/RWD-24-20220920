@@ -14,27 +14,46 @@
         .tab {
             width: 600px;
             margin: auto;
+            position: relative;
         }
         .tab-nav {
-            padding: 15px;
+           
             background-color: #bdfaff;
         }
         .tab-link {
             text-decoration: none;
             color: #222;
             padding-inline: 10px;
+            display: inline-block;
+            padding: 15px;
+            transition: 600ms;
         }
         .tab-link.active {
             text-decoration: underline;
             color: #004fb0;
+            background-color: #fa0;
         }
-        .tab-panel {
+        /* .tab-panel {
             display: none;
             background-color: #ccc;
             padding: 30px;
         }
         .tab-panel.active {
             display: block;
+        } */
+        .tab-panel {
+            visibility: hidden;
+            background-color: #ccc;
+            padding: 30px;
+            opacity: 0;
+            position: absolute;
+           
+
+            transition: 600ms
+        }
+        .tab-panel.active {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
 </head>
@@ -71,6 +90,8 @@
         let tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
             tabLink.onclick = e => {
+                document.querySelector('.tab-link.active').classList.remove('active');
+                e.target.classList.add('active');
                 let el = e.target.getAttribute('href');
                 console.log(el)
                 document.querySelector('.tab-panel.active').classList.remove('active');
