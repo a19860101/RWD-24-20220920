@@ -62,7 +62,12 @@
             margin: auto;
             border-radius: 8px;
             backdrop-filter: blur(7px);
+            transform: translateY(100%) rotate(180deg) scale(0);
+            transition: transform 600ms;
 
+        }
+        .slider-item.active .slider-caption {
+            transform: translateY(0)rotate(0)scale(1);
         }
         .slider-dots {
             width: 100%;
