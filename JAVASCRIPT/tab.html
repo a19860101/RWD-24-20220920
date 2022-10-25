@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            padding: 15px;
+            background-color: #bdfaff;
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #222;
+            padding-inline: 10px;
+        }
+        .tab-link.active {
+            text-decoration: underline;
+            color: #004fb0;
+        }
+        .tab-panel {
+            display: none;
+            background-color: #ccc;
+            padding: 30px;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#tab-3" class="tab-link">Tab 3</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor laborum a ipsam minus atque ut, cum molestiae architecto aliquid consectetur consequuntur, cumque voluptatum et, eveniet quia aperiam nihil ratione.
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>title 2</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, earum voluptatibus, ipsum reprehenderit maxime, blanditiis odit vero eum sit eos tempora magni reiciendis porro quam impedit laborum aut modi consequuntur.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi amet sequi quasi vel similique vitae temporibus ipsum placeat mollitia tempore nulla quas consequatur, nobis nostrum aperiam deleniti at corrupti reiciendis.
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos asperiores libero perspiciatis doloribus expedita placeat! Magnam, ducimus aliquid eos numquam quasi deserunt est expedita soluta? Et provident nesciunt quas deserunt id nulla ipsum voluptatem molestias sapiente iste explicabo atque rerum nam, beatae corporis inventore optio! Fugit eligendi distinctio impedit laborum.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
