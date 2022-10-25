@@ -49,6 +49,37 @@
         .slider-prev {
             left: 15px;
         }
+
+        .slider-caption {
+            position: absolute;
+            inset: 0;
+            color: #fff;
+            background-color: rgb(0 0 0 / .2);
+            width: fit-content;
+            height: fit-content;
+            padding: 30px;
+            text-align: center;
+            margin: auto;
+            border-radius: 8px;
+            backdrop-filter: blur(7px);
+
+        }
+        .slider-dots {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            z-index: 100;
+            padding-block: 10px;
+        }
+        .dot {
+            background-color: #f00;
+            width: 14px;
+            height: 14px;
+            margin-inline: 10px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -94,6 +125,9 @@
         </div>
         <div class="slider-dots"></div>
     </div>
+    <div class="test">
+
+    </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
@@ -127,6 +161,20 @@
         }
 
         let timer = setInterval(slider,timeout);
+
+        for(let i=0;i<total;i++){
+            // 0,1,2,3,4
+            let dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.target = i;
+            document.querySelector('.slider-dots').append(dot);
+        }
+
+        // let h1 = document.createElement('h1');
+        // h1.dataset.qq = '123';
+        // h1.dataset.happy = 'test';
+        // h1.append('hello');
+        // document.querySelector('.test').append(h1);
     </script>
 </body>
 </html>
