@@ -67,5 +67,16 @@
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = e => {
+                let el = e.target.getAttribute('href');
+                console.log(el)
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(el).classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
