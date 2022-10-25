@@ -79,6 +79,11 @@
             height: 14px;
             margin-inline: 10px;
             border-radius: 50%;
+            cursor: pointer;
+            transition: 600ms;
+        }
+        .dot.active {
+            background-color: #098;
         }
     </style>
 </head>
@@ -170,6 +175,22 @@
             document.querySelector('.slider-dots').append(dot);
         }
 
+        let dots = document.querySelectorAll('.dot');
+        dots[0].classList.add('active');
+        for(let dot of dots){
+            console.log(dot);
+            dot.onclick = e => {
+                document.querySelector('.dot.active').classList.remove('active');
+                e.target.classList.add('active');
+
+                currentIndex = e.target.dataset.target;
+                document.querySelector('.slider-item.active').classList.remove('active');
+                imgs[currentIndex].classList.add('active');
+
+                clearInterval(timer);
+                timer = setInterval(slider,timeout);
+            }
+        }
         // let h1 = document.createElement('h1');
         // h1.dataset.qq = '123';
         // h1.dataset.happy = 'test';
