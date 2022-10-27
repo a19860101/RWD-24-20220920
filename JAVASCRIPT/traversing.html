@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 遍歷 -->
+    <div class="container">
+        <h1 id="title">title</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid id ab corrupti dolorem, laborum sequi quod nihil iste quo beatae nemo, fugiat obcaecati consequatur sunt maiores mollitia maxime labore aspernatur!
+        </p>
+        <h2>
+            menu
+            <span>title</span>
+        </h2>
+        <ul>
+            <li class="list-item"><a href="#" class="link">list 1</a></li>
+            <li class="list-item"><a href="#" class="link">list 2</a></li>
+            <li class="list-item"><a href="#" class="link">list 3</a></li>
+            <li class="list-item"><a href="#" class="link">list 4</a></li>
+            <li class="list-item"><a href="#" class="link">list 5</a></li>
+            <li class="list-item"><a href="#" class="link">list 6</a></li>
+        </ul>
+    </div>
+    <script>
+        let el = document.querySelector('h2');
+        console.log(el);
+
+        // 父節點
+        console.log(el.parentNode);
+        // 父元素
+        console.log(el.parentElement);
+
+        // 子節點
+        console.log(el.childNodes)
+        // 子元素
+        console.log(el.children)
+
+        // 同輩節點
+        console.log(el.nextSibling);
+        console.log(el.previousSibling);
+        // 同輩元素
+        console.log(el.nextElementSibling)
+        console.log(el.previousElementSibling)
+
+        /* 
+            節點
+            1. 元素節點
+            2. 文字節點(文字、換行)
+            3. 註解節點
+        */
+    </script>
+</body>
+</html>
