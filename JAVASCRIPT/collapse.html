@@ -26,9 +26,10 @@
             background-color: #ffc5c5;
             height: 0;
             overflow-y: hidden;
+            transition: 600ms;
         }
         .collapse-panel.active {
-            
+
         }
     </style>
 </head>
@@ -74,5 +75,20 @@
             </p>
         </div>
     </aside>
+    <script>
+        let collapseBtns = document.querySelectorAll('.collapse-btn');
+        for(let collapseBtn of collapseBtns){
+            collapseBtn.onclick = e => {
+                let panel = e.target.nextElementSibling;
+                console.log(panel.style.height);
+
+                if(panel.style.height){
+                    panel.style.height = null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
