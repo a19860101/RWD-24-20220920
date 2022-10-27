@@ -9,6 +9,8 @@
         * {
             margin: 0;
             padding: 0;
+
+            box-sizing: border-box;
         }
         aside {
             width: 300px;
@@ -27,9 +29,12 @@
             height: 0;
             overflow-y: hidden;
             transition: 600ms;
+            padding-inline: 15px;
+            padding-block:0px;
+            box-sizing: content-box;
         }
         .collapse-panel.active {
-
+            padding-block:30px
         }
     </style>
 </head>
@@ -79,9 +84,11 @@
         let collapseBtns = document.querySelectorAll('.collapse-btn');
         for(let collapseBtn of collapseBtns){
             collapseBtn.onclick = e => {
+                e.target.classList.toggle('active');
+
                 let panel = e.target.nextElementSibling;
                 console.log(panel.style.height);
-
+                panel.classList.toggle('active');
                 if(panel.style.height){
                     panel.style.height = null;
                 }else{
