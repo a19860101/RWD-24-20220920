@@ -21,17 +21,27 @@
         <li>春芽冷露</li>
         <li>冷露歐蕾</li>
         <li>熟成歐蕾</li>
+        <li>Latte</li>
     </ul>
     <script>
         let input = document.querySelector('#input');
         let li = document.querySelectorAll('li');
         input.onkeyup = e => {
             for(let item of li){
-                if(item.textContent.indexOf(input.value) > -1){
+                // 大小寫有分別
+                // if(item.textContent.indexOf(input.value) > -1){
+                //     item.style.display = '';
+                // }else{
+                //     item.style.display = 'none';
+                // }
+                
+                // 大小寫無分別
+                if(item.textContent.toUpperCase().indexOf(input.value.toUpperCase()) > -1){
                     item.style.display = '';
                 }else{
                     item.style.display = 'none';
                 }
+                
             }
         }
 
