@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            background-color: #fa0;
+
+            padding: 30px;
+            border: 4px solid #000;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, quisquam? Similique minus possimus hic vero architecto dolore repellendus? Quas alias natus assumenda debitis reiciendis praesentium iusto placeat dolorem dolor eaque aliquam, hic possimus quisquam distinctio similique expedita fuga necessitatibus. Officia possimus nemo reiciendis expedita saepe perspiciatis maiores molestias, autem odit repudiandae quam nobis itaque, vitae culpa suscipit ex adipisci, et sunt. Iure eius quia corrupti placeat possimus amet provident optio repudiandae quos soluta enim voluptate, accusamus facere reprehenderit minima incidunt dignissimos. Adipisci voluptatum beatae repudiandae debitis ratione facere at molestiae iusto rem! Doloremque tenetur esse sequi reprehenderit eos nostrum eius.
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        let c_h = box.clientHeight; //(height + padding)
+        let o_h = box.offsetHeight; //(height + padding + border)
+        let s_h = box.scrollHeight; //(height + padding + overflow)
+        console.log(c_h,o_h,s_h);
+    </script>
+</body>
+</html>
