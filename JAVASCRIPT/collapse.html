@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        aside {
+            width: 300px;
+            background-color: #ccc;
+        }
+        .collapse-btn {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #000;
+            background-color: #ff3f3f;
+            border-bottom: #8a1f1f 2px solid;
+        }
+        .collapse-panel {
+            background-color: #ffc5c5;
+            height: 0;
+            overflow-y: hidden;
+        }
+        .collapse-panel.active {
+            
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">Panel 1</a>
+        <div class="collapse-panel" id="panel-1">
+            <h2>collapse panel 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-2">Panel 2</a>
+        <div class="collapse-panel" id="panel-2">
+            <h2>collapse panel 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">Panel 3</a>
+        <div class="collapse-panel" id="panel-3">
+            <h2>collapse panel 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+        </div>
+    </aside>
+</body>
+</html>
