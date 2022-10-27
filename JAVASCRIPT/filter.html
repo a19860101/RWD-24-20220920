@@ -24,15 +24,20 @@
     </ul>
     <script>
         let input = document.querySelector('#input');
-        console.log(input);
+        let li = document.querySelectorAll('li');
         input.onkeyup = e => {
-            console.log( input.value);
+            for(let item of li){
+                if(item.textContent.indexOf(input.value) > -1){
+                    item.style.display = '';
+                }else{
+                    item.style.display = 'none';
+                }
+            }
         }
 
-        let li = document.querySelectorAll('li');
-        for(let item of li){
-            console.log(item.textContent);
-        }
+        let s = 'hello';
+        console.log(s.indexOf('a'));
+       
 
     </script>
 </body>
