@@ -10,6 +10,8 @@
 </head>
 <body>
     <div id="app">
+        <input type="text" v-model="input">
+        {{input}}
         <h1>{{title}}</h1>
         <p>
             {{description}}
@@ -23,6 +25,7 @@
             </div>
         </div>
         <div>
+            <input type="text" v-model="qty">
             <div v-if="qty > 10">庫存充足</div>
             <div v-else-if="qty > 0">低庫存</div>
             <div v-else>補貨中</div>
@@ -30,12 +33,15 @@
 
         <div v-if="isShow">顯示</div>
         <div v-else>不顯示</div>
+
+        <input type="checkbox" v-model="isShow">
         <img :src="cover" alt="">
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
+                    input:'test',
                     title: 'Hello Vue',
                     description: '我是內容',
                     cover:'https://picsum.photos/id/26/800/400',
