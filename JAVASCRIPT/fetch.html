@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +12,25 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             display: flex;
             flex-wrap: wrap;
             width: 1200px;
-            margin-inline:auto;
+            margin-inline: auto;
         }
+
         .station {
             width: 25%;
             padding: 15px;
         }
     </style>
 </head>
+
 <body>
     <select name="" id="" class="area"></select>
     <div class="container">
-        
+
     </div>
     <script>
         // 空氣品質指標
@@ -35,49 +39,66 @@
         // YouBike2.0臺北市公共自行車即時資訊
         const url = 'https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json';
 
-
+        let el = document.querySelector('.container');
         fetch(url)
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(datas){
-            console.log(datas)
-            
-            let sareas = new Set([...datas.map(data => data.sarea)]);
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datas) {
 
-            for(let sarea of sareas){
-                let opt = document.createElement('option');
-                opt.append(sarea);
-                document.querySelector('.area').append(opt);
-            }
-            
-            console.log(sareas);
+                let sareas = new Set([...datas.map(data => data.sarea)]);
 
-            for(let data of datas){
-                console.log(data);
-                let station = document.createElement('div');
-                station.classList.add('station');
+                for (let sarea of sareas) {
+                    let opt = document.createElement('option');
+                    opt.append(sarea);
+                    document.querySelector('.area').append(opt);
+                }
 
-                let ar = document.createElement('div');
-                ar.classList.add('ar');
-                ar.append('站名:'+data.ar);
 
-                let tot = document.createElement('div');
-                tot.classList.add('tot');
-                tot.append(`共有${data.tot}停車格`);
-                let sbi = document.createElement('div');
-                sbi.classList.add('sbi');
-                sbi.append(`尚有${data.sbi}台車`);
 
-                station.append(ar,tot,sbi)
+            })
+        let sel = document.querySelector('.area');
+        sel.onchange = e => {
+            getData(e.target.value);
 
-                document.querySelector('.container').append(station)
+        }
+        async function getData(area) {
+            el.textContent = '';
+            await fetch(url)
+                .then(res => res.json())
+                .then(datas => {
+                    let filterDatas = datas.filter(data => data.sarea === area)
+                    console.log(filterDatas);
 
-                /* 
-                tot: 場站總停車格、sbi: 場站目前車輛數量、bemp: 空位數量、act: 全站禁用狀態(0:禁用、1:啟用)。
-                */
-            }
-        })
+                    for(let data of filterDatas){
+                        console.log(data);
+                        let station = document.createElement('div');
+                        station.classList.add('station');
+
+                        let ar = document.createElement('div');
+                        ar.classList.add('ar');
+                        ar.append('站名:'+data.ar);
+
+                        let tot = document.createElement('div');
+                        tot.classList.add('tot');
+                        tot.append(`共有${data.tot}停車格`);
+                        let sbi = document.createElement('div');
+                        sbi.classList.add('sbi');
+                        sbi.append(`尚有${data.sbi}台車`);
+
+                        station.append(ar,tot,sbi)
+
+                        el.append(station)
+
+                    }
+
+                }
+               
+            )}
+        /*
+        tot: 場站總停車格、sbi: 場站目前車輛數量、bemp: 空位數量、act: 全站禁用狀態(0:禁用、1:啟用)。
+        */
     </script>
 </body>
+
 </html>
