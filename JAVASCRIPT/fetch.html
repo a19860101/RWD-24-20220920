@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin-inline:auto;
+        }
+        .station {
+            width: 25%;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        
+    </div>
     <script>
         // 空氣品質指標
         // const url = 'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
@@ -17,11 +37,27 @@
 
         fetch(url)
         .then(function(response){
-            console.log(response);
             return response.json();
         })
-        .then(function(data){
-            console.log(data)
+        .then(function(datas){
+            console.log(datas)
+            for(let data of datas){
+                console.log(data);
+                let station = document.createElement('div');
+                station.classList.add('station');
+
+                let ar = document.createElement('div');
+                ar.classList.add('ar');
+                ar.append('站名:'+data.ar);
+
+                let tot = document.createElement('div');
+                tot.classList.add('tot');
+                tot.append(`共有${data.tot}車位`);
+
+                station.append(ar,tot)
+
+                document.querySelector('.container').append(station)
+            }
         })
     </script>
 </body>
