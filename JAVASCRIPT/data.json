@@ -1,0 +1,20 @@
+{
+    "title": "Test Data",
+    "datas":[
+        {
+            "id": 1,
+            "title": "紅茶",
+            "price": "15"
+        },
+        {
+            "id": 1,
+            "title": "綠茶",
+            "price": "15"
+        },
+        {
+            "id": 1,
+            "title": "奶茶",
+            "price": "25"
+        }
+    ]
+}
