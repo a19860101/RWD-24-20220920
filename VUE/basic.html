@@ -14,13 +14,17 @@
         <p>
             {{description}}
         </p>
+        <img :src="cover" alt="">
+        <a :href="link">{{link}}</a>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title: 'Hello Vue',
-                    description: '我是內容'
+                    description: '我是內容',
+                    cover:'https://picsum.photos/id/26/800/400',
+                    link: 'https://vuejs.org'
                 }
             }
         }).mount('#app')
