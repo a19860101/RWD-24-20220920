@@ -14,8 +14,23 @@
         <p>
             {{description}}
         </p>
-        <img :src="cover" alt="">
         <a :href="link">{{link}}</a>
+        <div>
+            <div v-for="drink,i of drinks">
+                {{i+1}}.
+                {{drink.title}}:
+                {{drink.price}}
+            </div>
+        </div>
+        <div>
+            <div v-if="qty > 10">庫存充足</div>
+            <div v-else-if="qty > 0">低庫存</div>
+            <div v-else>補貨中</div>
+        </div>
+
+        <div v-if="isShow">顯示</div>
+        <div v-else>不顯示</div>
+        <img :src="cover" alt="">
     </div>
     <script>
         Vue.createApp({
@@ -24,7 +39,26 @@
                     title: 'Hello Vue',
                     description: '我是內容',
                     cover:'https://picsum.photos/id/26/800/400',
-                    link: 'https://vuejs.org'
+                    link: 'https://vuejs.org',
+                    qty: 0,
+                    isShow: false,
+                    drinks: [
+                        {
+                            "id": 1,
+                            "title": "紅茶",
+                            "price": "15"
+                        },
+                        {
+                            "id": 1,
+                            "title": "綠茶",
+                            "price": "15"
+                        },
+                        {
+                            "id": 1,
+                            "title": "奶茶",
+                            "price": "25"
+                        }
+                    ]
                 }
             }
         }).mount('#app')
