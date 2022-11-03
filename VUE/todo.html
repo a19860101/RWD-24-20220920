@@ -20,17 +20,20 @@
     <div id="app">
         <input type="text" v-model="input"> <button @click="addTodo()">add</button>
         <h2 v-if="uncompletedTodos.length != 0">未完成</h2>
-        <div v-for="todo of uncompletedTodos" :key="todo.id" class="todos">
+        <!-- <h2 v-show="uncompletedTodos.length != 0">未完成2</h2> -->
+        <div v-for="todo,i of uncompletedTodos" :key="todo.id" class="todos">
             <div class="todo-item">
                 <input type="checkbox" v-model="todo.isCompleted">
                 {{todo.title}}
+                <button @click="deleteTodo(todo.id)">delete</button>
             </div>
         </div>
         <h2 v-if="completedTodos.length != 0">已完成</h2>
-        <div v-for="todo in completedTodos" :key="todo.id" class="todos">
+        <div v-for="todo,i in completedTodos" :key="todo.id" class="todos">
             <div class="todo-item">
                 <input type="checkbox" v-model="todo.isCompleted">
                 {{todo.title}}
+                <button @click="deleteTodo(todo.id)">delete</button>
             </div>
         </div>
     </div>
@@ -60,12 +63,19 @@
             },
             methods:{
                 addTodo(){
+                    if(this.input === ''){
+                        alert('請輸入資料');
+                        return
+                    }
                     this.todos.push({
                         id: Date.now(),
                         title: this.input,
                         isCompleted: false
                     }),
                     this.input = '';
+                },
+                deleteTodo(i){
+                    this.todos =  this.todos.filter(data=>data.id != i);
                 }
             },
             computed:{
