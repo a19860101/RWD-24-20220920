@@ -18,9 +18,12 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="input"> <button>add</button>
+        <input type="text" v-model="input"> <button @click="addTodo()">add</button>
         <div v-for="todo of todos" class="todos">
-            <div class="todo-item">{{todo.title}}</div>
+            <div class="todo-item">
+                <input type="checkbox" v-model="todo.isCompleted">
+                {{todo.title}}
+            </div>
         </div>
     </div>
     <script>
@@ -45,6 +48,16 @@
                             isCompleted: true
                         }
                     ]
+                }
+            },
+            methods:{
+                addTodo(){
+                    this.todos.push({
+                        id: Date.now(),
+                        title: this.input,
+                        isCompleted: false
+                    }),
+                    this.input = '';
                 }
             }
         }).mount('#app')
