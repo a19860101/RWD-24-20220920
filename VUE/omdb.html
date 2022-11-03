@@ -15,9 +15,11 @@
         <div v-for="data of datas">
             {{data}}
         </div>
-        <div>
-            <a href="#">上一頁</a>
-            <a href="#" @click="getNext()">下一頁</a>
+       
+        <div v-if="datas != ''">
+            <a href="#" @click="getPrev()" v-if="currentPage != 1">上一頁</a>
+            <a href="#" @click="getNext()" v-if="currentPage != totalPages">下一頁</a>
+            {{currentPage}} / {{totalPages}}
         </div>
     </div>
     <script>
@@ -27,6 +29,7 @@
                     title:'',
                     datas:'',
                     currentPage:1,
+                    totalPages:'',
                 }
             },
             methods:{
@@ -37,11 +40,23 @@
                     .then(res=>res.json())
                     .then(data=>{
                         console.log(data);
-                        this.datas = data.Search
+                        this.datas = data.Search;
+                        this.totalPages = Math.ceil(data.totalResults / 10);
                     })
                 },
                 async getNext(){
                     this.currentPage = this.currentPage + 1;
+                    console.log(this.currentPage);
+                    let url = `http://www.omdbapi.com/?apikey=18456e59&type=movie&s=${this.title}&page=${this.currentPage}`;
+                    await fetch(url)
+                    .then(res=>res.json())
+                    .then(data=>{
+                        console.log(this.datas);
+                        this.datas = data.Search
+                    })
+                },
+                async getPrev(){
+                    this.currentPage = this.currentPage - 1;
                     console.log(this.currentPage);
                     let url = `http://www.omdbapi.com/?apikey=18456e59&type=movie&s=${this.title}&page=${this.currentPage}`;
                     await fetch(url)
