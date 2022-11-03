@@ -19,7 +19,15 @@
 <body>
     <div id="app">
         <input type="text" v-model="input"> <button @click="addTodo()">add</button>
-        <div v-for="todo of todos" class="todos">
+        <h2>未完成</h2>
+        <div v-for="todo of uncompletedTodos" class="todos">
+            <div class="todo-item">
+                <input type="checkbox" v-model="todo.isCompleted">
+                {{todo.title}}
+            </div>
+        </div>
+        <h2>已完成</h2>
+        <div v-for="todo in completedTodos" class="todos">
             <div class="todo-item">
                 <input type="checkbox" v-model="todo.isCompleted">
                 {{todo.title}}
@@ -58,6 +66,14 @@
                         isCompleted: false
                     }),
                     this.input = '';
+                }
+            },
+            computed:{
+                completedTodos(){
+                    return this.todos.filter(data => data.isCompleted === true)
+                },
+                uncompletedTodos(){
+                    return this.todos.filter(data => data.isCompleted === false)
                 }
             }
         }).mount('#app')
