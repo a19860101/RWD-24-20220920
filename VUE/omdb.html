@@ -10,10 +10,14 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="title">
+        <input type="text" v-model="title" @keyup.enter="getMovies">
         <button @click="getMovies()">搜尋</button>
         <div v-for="data of datas">
             {{data}}
+        </div>
+        <div>
+            <a href="#">上一頁</a>
+            <a href="#" @click="getNext()">下一頁</a>
         </div>
     </div>
     <script>
@@ -21,17 +25,29 @@
             data(){
                 return{
                     title:'',
-                    datas:''
+                    datas:'',
+                    currentPage:1,
                 }
             },
             methods:{
                 getMovies(){
                     console.log(this.title);
-                    let url = 'http://www.omdbapi.com/?apikey=18456e59&s='+this.title;
+                    let url = `http://www.omdbapi.com/?apikey=18456e59&type=movie&s=${this.title}&page=${this.currentPage}`;
                     fetch(url)
                     .then(res=>res.json())
                     .then(data=>{
                         console.log(data);
+                        this.datas = data.Search
+                    })
+                },
+                async getNext(){
+                    this.currentPage = this.currentPage + 1;
+                    console.log(this.currentPage);
+                    let url = `http://www.omdbapi.com/?apikey=18456e59&type=movie&s=${this.title}&page=${this.currentPage}`;
+                    await fetch(url)
+                    .then(res=>res.json())
+                    .then(data=>{
+                        console.log(this.datas);
                         this.datas = data.Search
                     })
                 }
