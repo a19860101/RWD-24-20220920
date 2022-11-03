@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="add()">add</button>
+        <button @click="remove()">remove</button>
+        <button @click="toggle()">toggle</button>
+        <p :class="{'active':isActive}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi excepturi facere illum at nobis magnam ullam itaque obcaecati, repellat soluta ex fugit aut adipisci doloribus. Cum dolores commodi illum perspiciatis.
+        </p>
+        {{isActive}}
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    isActive: false
+                }
+            },
+            methods:{
+                toggle(){
+                    // console.log(this.isActive)
+                    this.isActive = !this.isActive
+                },
+                add(){
+                    this.isActive = true;
+                },
+                remove(){
+                    this.isActive = false;
+                }
+            }
+        }).mount('#app')
+    </script>    
+</body>
+</html>
