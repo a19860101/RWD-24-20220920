@@ -12,8 +12,8 @@
         <h2>目前天氣 {{w.weather[0].description}} 氣溫為{{w.main.temp}}&deg;C</h2>
         <div>體感溫度{{w.main.feels_like}}&deg;C 最高溫 {{w.main.temp_max}}&deg;C 最低溫 {{w.main.temp_min}}&deg;C</div>
         <div>濕度 {{w.main.humidity}}%</div>
-        <div>{{DT.getFullYear()}}年{{DT.getMonth() + 1}}月{{DT.getDate()}}日  星期{{DT.getDay()}}</div>
-        <div>{{DT.getHours()}}:{{DT.getMinutes()}}:{{DT.getSeconds()}}</div>
+        <div>{{DT.getFullYear()}}年{{DT.getMonth() + 1}}月{{DT.getDate()}}日  {{weekTW[DT.getDay()]}}</div>
+        <div>{{DT.getHours()}}:{{M}}:{{DT.getSeconds()}}</div>
     </div>
     <script>
         // b1ecbccd638b763d489602917ba47cc3
@@ -21,12 +21,24 @@
             data(){
                 return{
                     w:'',
+                    week:['SUN','MON','TUE','WED','THU','FRI','SAT'],
+                    weekTW:['星期日','星期一','星期二','星期三','星期四','星期五','星期六',],
+                    weekJP:['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日',]
                 }
             },
             computed:{
                 DT(){
                     let DT = new Date(this.w.dt *1000);
                     return DT;
+                },
+                M(){
+                    // if(this.DT.getMinutes() < 10){
+                    //     return '0'+this.DT.getMinutes()
+                    // }else{
+                    //     return this.DT.getMinutes()
+                    // }
+
+                    return this.DT.getMinutes() < 10 ? '0'+this.DT.getMinutes() : this.DT.getMinutes();
                 }
             },
             created(){
