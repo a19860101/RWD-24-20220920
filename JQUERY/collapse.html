@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+        aside {
+            width: 300px;
+            background-color: #ccc;
+        }
+        .collapse-btn {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            text-decoration: none;
+            color: #000;
+            background-color: #ff3f3f;
+            border-bottom: #8a1f1f 2px solid;
+            transition: 300ms;
+        }
+        .collapse-btn.active {
+            background-color: #f0ff8c;
+        }
+        .collapse-arrow {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-left:#000 3px solid;
+            border-bottom:#000 3px solid;
+            transform: rotate(-45deg);
+            margin-left: auto;
+            transition: 300ms;
+        }
+        .collapse-btn.active .collapse-arrow {
+            transform: rotate(135deg);
+        }
+        .collapse-panel {
+            background-color: #ffc5c5;
+            
+            padding-inline: 15px;
+            padding-block:30px;
+            display: none;
+        }
+        .collapse-panel.active {
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">
+            Panel 1
+            <span class="collapse-arrow"></span>
+        </a>
+        <div class="collapse-panel" id="panel-1">
+            <h2>collapse panel 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-2">Panel 2<span class="collapse-arrow"></span></a>
+        <div class="collapse-panel" id="panel-2">
+            <h2>collapse panel 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">Panel 3<span class="collapse-arrow"></span></a>
+        <div class="collapse-panel" id="panel-3">
+            <h2>collapse panel 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit natus ad eius vitae dignissimos ratione vel officia possimus similique eos facilis, dicta repudiandae distinctio mollitia odio sapiente? Eos, nam.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet eos earum ipsa nulla cupiditate, adipisci est, laboriosam consequatur maiores culpa eum reiciendis doloremque eius autem nesciunt. Voluptatum, ipsa debitis?
+            </p>
+        </div>
+    </aside>
+    <script>
+        $(function(){
+            $('.collapse-btn').click(function(){
+                // $(this).next().toggle(600);
+                // $(this).next().fadeToggle();
+                $(this).toggleClass('active');
+                $(this).next().slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>
