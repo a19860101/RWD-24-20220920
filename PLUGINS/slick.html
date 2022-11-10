@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <style>
+        header {
+            width: 1200px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="slider">
+            <div>
+                <img src="https://picsum.photos/id/91/1600/500" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/92/1600/500" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/93/1600/500" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/94/1600/500" alt="">
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/95/1600/500" alt="">
+            </div>
+        </div>
+    </header>
+    <script>
+        $(function(){
+            $('.slider').slick({
+                autoplay: true,
+                speed: 200,
+                autoplaySpeed: 1000
+            });
+        })
+    </script>
+</body>
+</html>
