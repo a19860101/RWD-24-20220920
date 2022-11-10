@@ -15,17 +15,25 @@
     </style>
 </head>
 <body>
-    <a href="https://picsum.photos/id/98/1200/800" data-lightbox="p">
+    <a href="https://picsum.photos/id/98/1200/800" data-lightbox="p" data-title="light box 1">
         <img src="https://picsum.photos/id/98/1200/800" alt="">
     </a>
-    <a href="https://picsum.photos/id/48/1200/800" data-lightbox="p">
+    <a href="https://picsum.photos/id/48/1200/800" data-lightbox="p" data-title="light box 2">
         <img src="https://picsum.photos/id/48/1200/800" alt="">
     </a>
-    <a href="https://picsum.photos/id/88/1200/800" data-lightbox="p">
+    <a href="https://picsum.photos/id/88/1200/800" data-lightbox="p" data-title="light box 3">
         <img src="https://picsum.photos/id/88/1200/800" alt="">
     </a>
-    <a href="https://picsum.photos/id/25/1200/800" data-lightbox="p">
+    <a href="https://picsum.photos/id/25/1200/800" data-lightbox="p" data-title="light box 4">
         <img src="https://picsum.photos/id/25/1200/800" alt="">
     </a>
+    <script>
+        lightbox.option({
+            albumLabel: "%1/%2",
+            fadeDuration: 600,
+            imageFadeDuration:300,
+            resizeDuration: 1200,
+        })
+    </script>
 </body>
 </html>
