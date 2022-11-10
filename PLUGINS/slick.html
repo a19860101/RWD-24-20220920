@@ -14,14 +14,15 @@
             background-color: rgb(255, 96, 96);
         }
         header {
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
         }
         img {
             width: 100%;
         }
         .products {
-            width: 1200px;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
         }
         .product-item {
@@ -110,11 +111,25 @@
                 dots: true,
             });
             $('.products').slick({
-                slidesToShow: 3,
+                slidesToShow: 5,
                 slidesToScroll: 1,
                 dots: true,
-                centerMode: true,
-                centerPadding: '150px'
+                centerMode: false,
+                centerPadding: '150px',
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            slidesToShow: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    }
+                ]
             });
         })
     </script>
