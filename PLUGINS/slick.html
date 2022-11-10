@@ -27,6 +27,19 @@
         .product-item {
             padding-inline:10px;
         }
+        .slick-next:before, .slick-prev:before {
+            color: #000;
+        }
+        header .slick-dots {
+            bottom: 8px;
+        }
+        header .slick-dots li button:before {
+            color: #fff;
+            opacity: .8;
+        }
+        header .slick-dots li.slick-active button:before {
+            color: #16b5ff;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +103,7 @@
     <script>
         $(function(){
             $('.slider').slick({
-                autoplay: true,
+                autoplay: false,
                 speed: 1200,
                 autoplaySpeed: 5000,
                 arrows: true,
