@@ -10,12 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <style>
+        body {
+            background-color: rgb(255, 96, 96);
+        }
         header {
             width: 1200px;
             margin: auto;
         }
         img {
             width: 100%;
+        }
+        .products {
+            width: 1200px;
+            margin: auto;
+        }
+        .product-item {
+            padding-inline:10px;
         }
     </style>
 </head>
@@ -39,12 +49,59 @@
             </div>
         </div>
     </header>
+    <div class="products">
+        <div class="product-item">
+            <img src="https://picsum.photos/id/31/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/32/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/33/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/34/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/35/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/36/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/37/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/38/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/39/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/40/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/41/600" alt="">
+        </div>
+        <div class="product-item">
+            <img src="https://picsum.photos/id/42/600" alt="">
+        </div>
+    </div>
     <script>
         $(function(){
             $('.slider').slick({
                 autoplay: true,
-                speed: 200,
-                autoplaySpeed: 1000
+                speed: 1200,
+                autoplaySpeed: 5000,
+                arrows: true,
+                dots: true,
+            });
+            $('.products').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                centerMode: true,
+                centerPadding: '150px'
             });
         })
     </script>
