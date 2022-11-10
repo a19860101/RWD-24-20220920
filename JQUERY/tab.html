@@ -87,7 +87,8 @@
             $('.tab-link').click(function(){
                 $('.tab-link.active').removeClass('active');
                 $(this).addClass('active');
-                let panel = $(this).attr('href');
+                // let panel = $(this).attr('href');
+                let panel = $(this).data('panel');
                 $('.tab-panel').fadeOut();
                 $(panel).fadeIn();
             })
