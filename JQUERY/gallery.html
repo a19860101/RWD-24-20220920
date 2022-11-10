@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        .gallery {
+            width: 600px;
+            margin: auto;
+        }
+        .main_pic {
+            display: block;
+        }
+        .thumb {
+            display: flex;
+            background-color: #000;
+        }
+        .thumbs {
+            width: 20%;
+            opacity: 0.3;
+            transition: opacity 500ms;
+        }
+        .active {
+            border-bottom: 5px solid #ff003c;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div>
+            <img src="https://picsum.photos/id/24/600" alt="" class="main_pic">
+        </div>
+        <div class="thumb">
+            <img src="https://picsum.photos/id/24/600" alt="" class="thumbs active">
+            <img src="https://picsum.photos/id/34/600" alt="" class="thumbs">
+            <img src="https://picsum.photos/id/44/600" alt="" class="thumbs">
+            <img src="https://picsum.photos/id/54/600" alt="" class="thumbs">
+            <img src="https://picsum.photos/id/64/600" alt="" class="thumbs">
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.thumbs').click(function(){
+                $('.thumbs.active').removeClass('active');
+                $(this).addClass('active');
+                let src = $(this).attr('src');
+                $('.main_pic').attr('src',src);
+            })
+        })
+    </script>
+</body>
+</html>
