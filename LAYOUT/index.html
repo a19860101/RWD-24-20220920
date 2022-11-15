@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The RWD Website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/final.css">
 </head>
 <body>
@@ -24,13 +28,37 @@
         </div>
     </nav>
     <header>
-        <img src="https://picsum.photos/id/47/1600/800" alt="">
-        <div class="header-content">
-            <h1>HELLO RWD!!!</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At beatae repellat iusto odit dignissimos dolor asperiores animi ipsa dolorum esse!
-            </p>
-            <a href="#" class="btn btn-light">LINK</a>
+        <div class="slider owl-theme owl-carousel">
+            <div>
+                <img src="https://picsum.photos/id/47/1600/800" alt="">
+                <div class="header-content">
+                    <h1>HELLO RWD!!!</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At beatae repellat iusto odit dignissimos dolor asperiores animi ipsa dolorum esse!
+                    </p>
+                    <a href="#" class="btn btn-light">LINK</a>
+                </div>
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/48/1600/800" alt="">
+                <div class="header-content">
+                    <h1>HELLO Owl</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At beatae repellat iusto odit dignissimos dolor asperiores animi ipsa dolorum esse!
+                    </p>
+                    <a href="#" class="btn btn-light">LINK</a>
+                </div>
+            </div>
+            <div>
+                <img src="https://picsum.photos/id/49/1600/800" alt="">
+                <div class="header-content">
+                    <h1>HELLO AOS</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At beatae repellat iusto odit dignissimos dolor asperiores animi ipsa dolorum esse!
+                    </p>
+                    <a href="#" class="btn btn-light">LINK</a>
+                </div>
+            </div>
         </div>
     </header>
     <section id="about" class="t-center">
@@ -167,6 +195,14 @@
     <a href="#" class="gotop"><i class="fa-solid fa-chevron-up fa-2x"></i></a>
     <script>
         AOS.init();
+        $(function(){
+            $('.slider').owlCarousel({
+                items: 1,
+                autoplay: true,
+                loop: true,
+                dots: true
+            })
+        })
     </script>
 </body>
 </html>

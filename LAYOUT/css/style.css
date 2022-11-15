@@ -53,7 +53,7 @@ nav {
 /* HEADER */
 header {
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
 }
 header img {
     width: 100%;
@@ -246,5 +246,18 @@ footer {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    z-index: 999;
 }
 /* GOTOP END*/
+
+/* owl-dots */
+.owl-theme .owl-nav.disabled+.owl-dots {
+    /* background-color: #fa0; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
