@@ -9,11 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <style>
-        body {
-            background-color: rgb(255, 96, 96);
-        }
         header {
             max-width: 1200px;
             margin: auto;
@@ -25,6 +22,16 @@
             width: 90%;
             max-width: 1200px;
             margin: auto;
+        }
+        .slider i {
+            font-size: 48px;
+        }
+        .owl-theme .owl-nav [class*=owl-] {
+            transition: 400ms;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: initial;
+            color: #e10047;
         }
     </style>
 </head>
@@ -92,19 +99,21 @@
                 items:1,
                 loop: true,
                 autoplayTimeout: 1600,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 1500,
                 nav: true,
                 navSpeed: 1500,
                 dots:true,
-                dotsSpeed: 1500
+                dotsSpeed: 1500,
+                stagePadding: 100,
+                navText:['<i class="las la-chevron-left"></i>','<i class="las la-chevron-right"></i>']
             });
             $('.products').owlCarousel({
-                items: 5,
+                items: 6,
                 margin: 20,
                 center: true,
                 loop: true,
-                dotsSpeed: 800
+                dotsSpeed: 800,
             })
         })
     </script>
