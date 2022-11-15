@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The RWD Website</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/final.css">
 </head>
@@ -33,10 +35,10 @@
     </header>
     <section id="about" class="t-center">
         <div class="container row">
-            <div class="col-12">
+            <div class="col-12" data-aos="zoom-in">
                 <h2 class="section-title">About</h2>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4" data-aos="zoom-in" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
                 <div class="about-icon">
                     <i class="fa-solid fa-cube fa-4x"></i>
                 </div>
@@ -46,7 +48,7 @@
                 </p>
                 <a href="#" class="btn btn-dark">More</a>
             </div>
-            <div class="col-6 col-md-4">
+            <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
                 <div class="about-icon">
                     <i class="fa-solid fa-torii-gate fa-4x"></i>
                 </div>
@@ -56,7 +58,7 @@
                 </p>
                 <a href="#" class="btn btn-dark">More</a>
             </div>
-            <div class="col-6 col-md-4">
+            <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="600" data-aos-anchor-placement="center-bottom">
                 <div class="about-icon">
                     <i class="fa-solid fa-meteor fa-4x"></i>
                 </div>
@@ -71,9 +73,9 @@
     <section id="service">
         <div class="container row">
             <div class="col-12">
-                <h2 class="section-title t-center">Service</h2>
+                <h2 class="section-title t-center"  data-aos="fade-up">Service</h2>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/id/98/800/600" alt="" class="obj-cover">
@@ -87,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/id/18/800/600" alt="" class="obj-cover">
@@ -101,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="center-bottom">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/id/70/800/600" alt="" class="obj-cover">
@@ -115,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="800" data-aos-anchor-placement="center-bottom">
                 <div class="card">
                     <div class="card-img">
                         <img src="https://picsum.photos/id/28/800/600" alt="" class="obj-cover">
@@ -134,9 +136,9 @@
     <section id="contact">
         <div class="container row justify-content-center">
             <div class="col-12">
-                <h2 class="section-title t-center">Contact</h2>
+                <h2 class="section-title t-center" data-aos="zoom-out">Contact</h2>
             </div>
-            <div class="col-10 col-md-8 col-lg-6">
+            <div class="col-10 col-md-8 col-lg-6" data-aos="zoom-out">
                 <form action="">
                     <div class="form-group">
                         <label for="">Name</label>
@@ -163,5 +165,8 @@
         2022&copy; XXX All Rights Reserved . Design by poi
     </footer>
     <a href="#" class="gotop"><i class="fa-solid fa-chevron-up fa-2x"></i></a>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
