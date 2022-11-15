@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -69,23 +71,23 @@
         <a href="#section-3">section 3</a>
     </nav>
     <header>
-        <h1>HELLO AOS!!</h1>
+        <h1 data-aos="fade-up">HELLO AOS!!</h1>
     </header>
     <section id="section-1">
         <div class="container">
-            <div class="box">
+            <div class="box" data-aos="fade-down" data-aos-delay="0" data-aos-duration="200">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-down" data-aos-delay="300" data-aos-duration="200">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-down" data-aos-delay="600" data-aos-duration="200">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
@@ -95,31 +97,31 @@
     </section>
     <section id="section-2">
         <div class="container">
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="0">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="1200">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
@@ -129,25 +131,25 @@
     </section>
     <section id="section-3">
         <div class="container">
-            <div class="box">
+            <div class="box" data-aos="flip-right" data-aos-delay="0">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-right" data-aos-delay="300">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-right" data-aos-delay="600">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
                 </p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="flip-right" data-aos-delay="900">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit laborum sunt obcaecati, tenetur quia aspernatur accusantium nam delectus eligendi quis vitae cupiditate omnis asperiores dolorum esse id architecto officiis!
@@ -155,5 +157,8 @@
             </div>
         </div>
     </section>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
