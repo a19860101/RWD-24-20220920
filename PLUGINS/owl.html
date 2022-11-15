@@ -26,10 +26,6 @@
             max-width: 1200px;
             margin: auto;
         }
-        .product-item {
-            padding-inline:10px;
-        }
-       
     </style>
 </head>
 <body>
@@ -94,10 +90,21 @@
         $(function(){
             $('.slider').owlCarousel({
                 items:1,
-                autoplay: true
+                loop: true,
+                autoplayTimeout: 1600,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                nav: true,
+                navSpeed: 1500,
+                dots:true,
+                dotsSpeed: 1500
             });
             $('.products').owlCarousel({
                 items: 5,
+                margin: 20,
+                center: true,
+                loop: true,
+                dotsSpeed: 800
             })
         })
     </script>
