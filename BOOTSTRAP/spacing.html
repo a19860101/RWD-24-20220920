@@ -14,6 +14,7 @@
         m for margin
         p for padding
 
+        direction:
         t -> top
         b -> bottom
         s -> start(left)
@@ -21,6 +22,7 @@
         x -> left and right
         y -> top and bottom
 
+        size:
         0 -> 0
         1 -> 0.25rem (4px)
         2 -> 0.5rem (8px)
@@ -28,6 +30,12 @@
         4 -> 1.5rem (24px)
         5 -> 3rem (48px)
         auto -> auto
+
+        m{direction}-{size}
+        m{direction}-{breakpoint}-{size}
+        p{direction}-{size}
+        p{direction}-{breakpoint}-{size}
+        
     -->
     <h1 class="bg-primary mt-3 ms-3 py-4 ps-5">HELLO SPACING</h1>
     <div class="w-50 bg-danger mx-auto p-5">
