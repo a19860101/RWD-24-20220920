@@ -46,14 +46,54 @@
         align-items-center
         align-items-end
     -->
+    <!-- 
+        order
+        先排自然排序，在排order
+     -->
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-6 order-1">
                 <img src="https://picsum.photos/id/32/800/600" alt="" class="w-100">
             </div>
-            <div class="col-6">
-                <h2>title</h2>
+            <div class="col-6 order-0">
+                <h2>title 1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat debitis cum harum maiores facilis illum necessitatibus dolores eligendi architecto! Assumenda?</p>
+            </div>
+            <div class="col-6 order-2">
+                <img src="https://picsum.photos/id/12/800/600" alt="" class="w-100">
+            </div>
+            <div class="col-6 order-3">
+                <h2>title 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat debitis cum harum maiores facilis illum necessitatibus dolores eligendi architecto! Assumenda?</p>
+            </div>
+            <div class="col-6 order-5">
+                <img src="https://picsum.photos/id/42/800/600" alt="" class="w-100">
+            </div>
+            <div class="col-6 order-4">
+                <h2>title 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat debitis cum harum maiores facilis illum necessitatibus dolores eligendi architecto! Assumenda?</p>
+            </div>
+        </div>
+    </div>
+    <!-- 
+        offset 偏移
+     -->
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-6">
+                <img src="https://picsum.photos/id/87/800/300" alt="" class="w-100">
+            </div>
+            <div class="offset-3 col-6">
+                <img src="https://picsum.photos/id/87/800/300" alt="" class="w-100">
+            </div>
+            <div class="offset-6 col-6">
+                <img src="https://picsum.photos/id/87/800/300" alt="" class="w-100">
+            </div>
+            <div class="offset-3 col-6">
+                <img src="https://picsum.photos/id/87/800/300" alt="" class="w-100">
+            </div>
+            <div class="col-6">
+                <img src="https://picsum.photos/id/87/800/300" alt="" class="w-100">
             </div>
         </div>
     </div>
