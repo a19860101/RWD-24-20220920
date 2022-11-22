@@ -23,7 +23,7 @@
             background-color: #f00f0f;
             border-radius: 50%;
         }
-        #about,#product {
+        #about,#product,#contact {
             padding-top: 120px;
             padding-bottom: 120px;
         }
@@ -50,10 +50,7 @@
                         <a class="nav-link" href="#product">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
@@ -122,6 +119,9 @@
     <section id="about" class="bg-light">
         <div class="container">
             <div class="row gy-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 display-4">About</h2>
+                </div>
                 <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0 text-center">
                     <div class="mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
@@ -173,6 +173,9 @@
     <section id="product">
         <div class="container">
             <div class="row g-0">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 display-4">Product</h2>
+                </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-6">
                     <a href="#">
                         <img src="https://picsum.photos/800/600?random=1" class="w-100" alt="">
@@ -232,6 +235,38 @@
                     <a href="#">
                         <img src="https://picsum.photos/800/600?random=12" class="w-100" alt="">
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5 display-4">Contact</h2>
+                </div>
+                <div class="col-sm-8 col-10 mx-auto">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Phone</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Content</label>
+                            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-outline-primary w-100" value="送出">
+                        <!-- <input type="submit" class="btn btn-sm btn-outline-primary"> -->
+                        <!-- <input type="submit" class="btn btn-lg btn-outline-primary"> -->
+                    </form>
                 </div>
             </div>
         </div>
