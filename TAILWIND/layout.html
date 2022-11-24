@@ -10,39 +10,49 @@
 </head>
 <body>
     <!--桌機板選單 -->
-    <nav class="w-full bg-zinc-800 px-3 py-5 hidden md:flex">
-        <a href="#" class="text-zinc-100 mr-4">Logo</a>
+    <nav class="w-full bg-zinc-800 px-3 py-2 hidden md:flex">
+        <a href="#" class="text-zinc-100 px-3 py-1">Logo</a>
         <div class="w-full flex">
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-zinc-100">選單</a></li>
-                <li><a href="#" class="text-zinc-100">選單</a></li>
-                <li><a href="#" class="text-zinc-100">選單</a></li>
-                <li><a href="#" class="text-zinc-100">選單</a></li>
+            <ul class="flex">
+                <li><a href="#" class="text-zinc-100 inline-block px-3 py-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
+                <li><a href="#" class="text-zinc-100 inline-block px-3 py-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
+                <li><a href="#" class="text-zinc-100 inline-block px-3 py-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
+                <li><a href="#" class="text-zinc-100 inline-block px-3 py-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
             </ul>
-            <ul class="ml-auto flex space-x-4">
-                <li><a href="#" class="text-zinc-100">登入</a></li>
-                <li><a href="#" class="text-zinc-100">註冊</a></li>
+            <ul class="ml-auto flex">
+                <li><a href="#" class="text-zinc-100 inline-block px-3 py-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">登入</a></li>
+                <li><a href="#" class="text-zinc-100 inline-block px-3 py-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">註冊</a></li>
             </ul>
         </div>
     </nav>
     <!-- 手機板選單 -->
-    <nav class="w-96 fixed h-full right-0 bg-zinc-800 px-3 py-5 block md:hidden">
+    <nav class="w-96 fixed h-full right-0 bg-zinc-800 px-3 py-5 hidden md:hidden">
         <a href="#" class="absolute left-[-30px]">
             <i class="fa fa-bars fa-lg"></i>
         </a>
         <a href="#" class="text-zinc-100 mb-4 inline-block">Logo</a>
-        <div class="space-y-4">
-            <ul class="space-y-4">
-                <li><a href="#" class="text-zinc-100">選單</a></li>
-                <li><a href="#" class="text-zinc-100">選單</a></li>
-                <li><a href="#" class="text-zinc-100">選單</a></li>
-                <li><a href="#" class="text-zinc-100">選單</a></li>
+        <div class="space-y-2">
+            <ul class="space-y-2">
+                <li><a href="#" class="text-zinc-100 block p-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
+                <li><a href="#" class="text-zinc-100 block p-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
+                <li><a href="#" class="text-zinc-100 block p-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
+                <li><a href="#" class="text-zinc-100 block p-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">選單</a></li>
             </ul>
-            <ul class="space-y-4">
-                <li><a href="#" class="text-zinc-100">登入</a></li>
-                <li><a href="#" class="text-zinc-100">註冊</a></li>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-zinc-100 block p-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">登入</a></li>
+                <li><a href="#" class="text-zinc-100 block p-1 rounded hover:bg-amber-300 hover:text-amber-900 transition-color duration-300">註冊</a></li>
             </ul>
         </div>
     </nav>
+    <header class="relative">
+        <img src="https://picsum.photos/id/24/1600/800" alt="" class="w-full">
+        <div class="bg-white/30 space-y-4 w-3/5 max-w-3xl h-fit absolute inset-0 m-auto text-center p-6 rounded-xl backdrop-blur-sm shadow-lg">
+            <h1 class="text-3xl font-bold">title</h1>
+            <p class="text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in eveniet temporibus?
+            </p>
+            <a href="#" class="inline-block bg-lime-400 px-3 py-1 rounded">More</a>
+        </div>
+    </header>
 </body>
 </html>
