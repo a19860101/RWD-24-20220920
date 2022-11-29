@@ -7,15 +7,18 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Monoton&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">    <style>
         .mobile-nav.active {
             transform: translateX(0);
         }
     </style>
+    <script src="tailwind.config.js"></script>
 </head>
 <body>
     <!--桌機板選單 -->
-    <nav class="w-full bg-zinc-800 px-3 py-2 hidden md:flex">
+    <nav class="w-full px-3 py-2 hidden md:flex bg-coffee-600">
         <a href="#" class="text-zinc-100 px-3 py-1">Logo</a>
         <div class="w-full flex">
             <ul class="flex">
@@ -52,7 +55,7 @@
     <header class="relative">
         <img src="https://picsum.photos/id/24/1600/800" alt="" class="w-full">
         <div class="bg-white/30 space-y-4 w-3/5 max-w-3xl h-fit absolute inset-0 m-auto text-center p-6 rounded-xl backdrop-blur-sm shadow-lg">
-            <h1 class="text-3xl font-bold">title</h1>
+            <h1 class="text-4xl font-title">HELLO WORLD!!</h1>
             <p class="text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in eveniet temporibus?
             </p>
@@ -62,7 +65,7 @@
     <section class="py-32 bg-lime-50">
         <div class="container flex mx-auto flex-wrap text-center">
             <div class="w-full">
-                <h2 class="text-4xl font-bold mb-8">- 關於 -</h2>
+                <h2 class="text-4xl font-bold mb-8 font-serif">- 關於 -</h2>
             </div>
             <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto p-3 space-y-4">
                 <h3 class="text-2xl font-bold">title</h3>
