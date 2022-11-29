@@ -7,6 +7,11 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+    </style>
 </head>
 <body>
     <!--桌機板選單 -->
@@ -26,8 +31,8 @@
         </div>
     </nav>
     <!-- 手機板選單 -->
-    <nav class="w-96 fixed h-full right-0 bg-zinc-800 px-3 py-5 hidden md:hidden">
-        <a href="#" class="absolute left-[-30px]">
+    <nav class="w-96 fixed h-full right-0 bg-zinc-800 px-3 py-5 md:hidden z-50 translate-x-[100%] mobile-nav transition duration-700">
+        <a href="#" class="absolute left-[-30px] toggle">
             <i class="fa fa-bars fa-lg"></i>
         </a>
         <a href="#" class="text-zinc-100 mb-4 inline-block">Logo</a>
@@ -245,5 +250,15 @@
             </div>
         </div>
     </section>
+    <footer class="bg-zinc-900 text-white text-center py-4">
+        copyright&copy;2022,All rights reserved
+    </footer>
+    <script>
+        let hamburger = document.querySelector('.toggle');
+        hamburger.onclick = e => {
+            console.log('test')
+            document.querySelector('.mobile-nav').classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
