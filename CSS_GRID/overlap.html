@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 1200px;
+            margin-inline: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            place-items: center;
+        }
+        .cover {
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+        }
+        .content {
+            background-color: rgb(234 33 123 / .5);
+            grid-column: 2 / 4;
+            grid-row: 1 / -1;
+
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        .cover img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cover">
+            <img src="https://picsum.photos/id/234/1200/600" alt="">
+        </div>
+        <div class="content">
+            <h1>HELLO GRID!!</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut hic laudantium similique itaque debitis et libero animi ipsa quod obcaecati nulla, illo consectetur voluptatum deserunt est quae modi illum!
+            </p>
+        </div>
+    </header>
+</body>
+</html>
