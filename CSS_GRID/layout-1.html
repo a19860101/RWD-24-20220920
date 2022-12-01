@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+        body {
+            background-color: rgb(225, 225, 225);
+        }
+        .container {
+            width: 1200px;
+            height: fit-content;
+            position: absolute;
+            inset:0;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            gap: 1rem;
+        }
+        .item {
+            border-radius: 12px;
+            padding: 15px;
+            border:1px solid #aaa;
+            background-color: #fff;
+            box-shadow: 2px 3px 5px 0 rgb(0 0 0 /.2);
+        }
+        .bg-yellow {background-color: #ffed25;}
+        .bg-purple {background-color: #7d00b2; color: #fff;}
+
+        .item:nth-of-type(1){
+            grid-column: span 2;
+        }
+        .item:nth-of-type(3){
+            grid-row: span 2
+        }
+        .item:last-of-type{
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item bg-yellow">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A iste quaerat rerum libero vitae porro facere, nemo reiciendis corrupti magni nobis culpa iure omnis animi minima ratione cumque, optio voluptate mollitia, at hic nam ad? Ipsam labore cumque laborum blanditiis dolorum ea neque qui aliquid consequatur expedita deserunt, unde, saepe reiciendis id autem dignissimos. Nihil dolor quasi eveniet natus labore, omnis ratione! Dolorum, dolor!
+            </p>
+        </div>
+        <div class="item">
+            <h2>tite 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni nemo, alias a eligendi autem cupiditate sint incidunt consectetur excepturi fugit. Ea, placeat impedit natus velit officiis corporis tempore ducimus nostrum.
+            </p>
+        </div>
+        <div class="item bg-purple">
+            <h2>tite 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores modi laborum accusamus officia corporis quidem alias, eveniet assumenda quam maxime nobis neque perspiciatis eos aliquam laudantium in minima! Officia accusamus quos dolores modi deleniti? Amet iure aperiam quos unde hic, totam animi, magni laudantium dignissimos sint beatae sapiente esse ut repellendus, maiores cumque! Perferendis est iusto velit quo eos. Voluptatem vitae non consequatur libero.
+            </p>
+        </div>
+        <div class="item">
+            <h2>tite 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus iste quae, harum mollitia atque itaque voluptatum, architecto fugiat pariatur culpa aliquam qui, tenetur libero nemo. Itaque, magni ratione. Magnam.
+            </p>
+        </div>
+        <div class="item bg-yellow">
+            <h2>title 5</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam ab asperiores explicabo. Rem eveniet fugit vero qui deleniti inventore cum corporis iure cupiditate! Nihil impedit unde non voluptatum delectus.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam ab asperiores explicabo. Rem eveniet fugit vero qui deleniti inventore cum corporis iure cupiditate! Nihil impedit unde non voluptatum delectus.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
