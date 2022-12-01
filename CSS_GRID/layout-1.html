@@ -15,14 +15,42 @@
             background-color: rgb(225, 225, 225);
         }
         .container {
-            width: 1200px;
+            padding-block: 50px;
+            max-width: 1200px;
+            width:90%;
             height: fit-content;
-            position: absolute;
+            position: static;
             inset:0;
             margin: auto;
             display: grid;
-            grid-template-columns: repeat(4 ,1fr);
+            /* grid-template-columns: repeat(4 ,1fr); */
             gap: 1rem;
+            grid-template-areas: 
+                'one'
+                'two'
+                'three'
+                'four'
+                'five'
+            ;
+        }
+        @media (min-width: 600px){
+            .container {
+                position: absolute;
+                grid-template-areas: 
+                'three three'
+                'five two'
+                'five four'
+                'one one'
+            ;
+            }
+        }
+        @media (min-width: 1200px){
+            .container {
+                grid-template-areas: 
+                'one one two three'
+                'four five five three'
+            ;
+            }
         }
         .item {
             border-radius: 12px;
@@ -35,13 +63,22 @@
         .bg-purple {background-color: #7d00b2; color: #fff;}
 
         .item:nth-of-type(1){
-            grid-column: span 2;
+            /* grid-column: span 2; */
+            grid-area: one;
+        }
+        .item:nth-of-type(2){
+            grid-area: two;
         }
         .item:nth-of-type(3){
-            grid-row: span 2
+            /* grid-row: span 2; */
+            grid-area: three;
+        }
+        .item:nth-of-type(4){
+            grid-area: four;
         }
         .item:last-of-type{
-            grid-column: span 2;
+            /* grid-column: span 2; */
+            grid-area: five;
         }
     </style>
 </head>
